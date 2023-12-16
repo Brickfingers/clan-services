@@ -2,6 +2,7 @@ package com.novamaday.d4j.maven.simplebot.listeners;
 
 import com.novamaday.d4j.maven.simplebot.commands.GreetCommand;
 import com.novamaday.d4j.maven.simplebot.commands.PingCommand;
+import com.novamaday.d4j.maven.simplebot.commands.RollCommand;
 import com.novamaday.d4j.maven.simplebot.commands.SlashCommand;
 import discord4j.core.event.domain.interaction.ChatInputInteractionEvent;
 import reactor.core.publisher.Flux;
@@ -18,6 +19,7 @@ public class SlashCommandListener {
         //We register our commands here when the class is initialized
         commands.add(new PingCommand());
         commands.add(new GreetCommand());
+        commands.add(new RollCommand());
     }
 
     public static Mono<Void> handle(ChatInputInteractionEvent event) {
